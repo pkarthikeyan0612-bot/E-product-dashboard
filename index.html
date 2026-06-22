@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boys Cosmetic Store</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">👑</span>
+      <span class="logo-text">BOYS <span class="accent">COSMETIC</span> STORE</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#dresses">Dresses</a></li>
+      <li><a href="#shoes">Shoes</a></li>
+      <li><a href="#accessories">Accessories</a></li>
+      <li><a href="#cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count" id="cartCount">0</span></a></li>
+    </ul>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-tag">NEW COLLECTION 2025</p>
+      <h1 class="hero-title">Style That<br/><span class="accent">Defines You</span></h1>
+      <p class="hero-sub">Premium fashion for the modern boy — dresses, shoes & accessories curated just for you.</p>
+      <a href="#dresses" class="btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?w=600&q=80" alt="Fashion Hero" />
+    </div>
+  </section>
+
+  <!-- CATEGORY TABS -->
+  <section class="categories-section">
+    <h2 class="section-title">Our <span class="accent">Collections</span></h2>
+    <div class="category-tabs">
+      <button class="tab-btn active" data-category="all">All</button>
+      <button class="tab-btn" data-category="dresses">Dresses</button>
+      <button class="tab-btn" data-category="shoes">Shoes</button>
+      <button class="tab-btn" data-category="accessories">Accessories</button>
+    </div>
+  </section>
+
+  <!-- DRESSES SECTION -->
+  <section class="products-section" id="dresses">
+    <h3 class="cat-heading" data-category="dresses"><i class="fas fa-tshirt"></i> Boys Dresses</h3>
+    <div class="products-grid" id="dressesGrid">
+
+      <div class="product-card" data-category="dresses">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&q=80" alt="Casual Blue Shirt" loading="lazy"/>
+          <span class="badge">New</span>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Casual Blue Shirt</h4>
+          <p class="product-desc">Slim-fit cotton shirt, perfect for everyday wear.</p>
+          <div class="product-bottom">
+            <span class="price">₹699</span>
+            <button class="add-cart-btn" onclick="addToCart('Casual Blue Shirt', 699)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="dresses">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2hpdGUlMjBzaGlydHxlbnwwfHwwfHx8MA%3D%3D" alt="Classic White Tee" loading="lazy"/>
+          <span class="badge sale">Sale</span>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Classic White Tee</h4>
+          <p class="product-desc">Soft premium cotton round-neck t-shirt.</p>
+          <div class="product-bottom">
+            <span class="price">₹399</span>
+            <button class="add-cart-btn" onclick="addToCart('Classic White Tee', 399)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="dresses">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=400&q=80" alt="Denim Jacket" loading="lazy"/>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Denim Jacket</h4>
+          <p class="product-desc">Stylish blue denim jacket with button closure.</p>
+          <div class="product-bottom">
+            <span class="price">₹1,299</span>
+            <button class="add-cart-btn" onclick="addToCart('Denim Jacket', 1299)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="dresses">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80" alt="Jogger Pants" loading="lazy"/>
+          <span class="badge">Trending</span>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Jogger Pants</h4>
+          <p class="product-desc">Comfortable stretch joggers for sport and casual.</p>
+          <div class="product-bottom">
+            <span class="price">₹849</span>
+            <button class="add-cart-btn" onclick="addToCart('Jogger Pants', 849)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SHOES SECTION -->
+  <section class="products-section" id="shoes">
+    <h3 class="cat-heading" data-category="shoes"><i class="fas fa-shoe-prints"></i> Boys Shoes</h3>
+    <div class="products-grid" id="shoesGrid">
+
+      <div class="product-card" data-category="shoes">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80" alt="Red Sneakers" loading="lazy"/>
+          <span class="badge">Hot</span>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Red Sneakers</h4>
+          <p class="product-desc">Bold red lace-up sneakers with cushioned sole.</p>
+          <div class="product-bottom">
+            <span class="price">₹1,999</span>
+            <button class="add-cart-btn" onclick="addToCart('Red Sneakers', 1999)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="shoes">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=400&q=80" alt="White Running Shoes" loading="lazy"/>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>White Running Shoes</h4>
+          <p class="product-desc">Lightweight breathable shoes for everyday runs.</p>
+          <div class="product-bottom">
+            <span class="price">₹2,499</span>
+            <button class="add-cart-btn" onclick="addToCart('White Running Shoes', 2499)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="shoes">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=400&q=80" alt="Black Leather Boots" loading="lazy"/>
+          <span class="badge">Premium</span>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Black Leather Boots</h4>
+          <p class="product-desc">Premium genuine leather ankle boots for style.</p>
+          <div class="product-bottom">
+            <span class="price">₹3,299</span>
+            <button class="add-cart-btn" onclick="addToCart('Black Leather Boots', 3299)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="shoes">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=400&q=80" alt="Sports Slippers" loading="lazy"/>
+          <span class="badge sale">Sale</span>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Sports Slippers</h4>
+          <p class="product-desc">Comfy EVA sole slippers for home and outdoor.</p>
+          <div class="product-bottom">
+            <span class="price">₹599</span>
+            <button class="add-cart-btn" onclick="addToCart('Sports Slippers', 599)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACCESSORIES SECTION -->
+  <section class="products-section" id="accessories">
+    <h3 class="cat-heading" data-category="accessories"><i class="fas fa-glasses"></i> Boys Accessories</h3>
+    <div class="products-grid" id="accessoriesGrid">
+
+      <div class="product-card" data-category="accessories">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&q=80" alt="Smart Watch" loading="lazy"/>
+          <span class="badge">New</span>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Smart Watch</h4>
+          <p class="product-desc">Fitness tracker smartwatch with AMOLED display.</p>
+          <div class="product-bottom">
+            <span class="price">₹4,999</span>
+            <button class="add-cart-btn" onclick="addToCart('Smart Watch', 4999)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="accessories">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&q=80" alt="Sunglasses" loading="lazy"/>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Aviator Sunglasses</h4>
+          <p class="product-desc">UV400 protected stylish aviator sunglasses.</p>
+          <div class="product-bottom">
+            <span class="price">₹799</span>
+            <button class="add-cart-btn" onclick="addToCart('Aviator Sunglasses', 799)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="accessories">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=80" alt="Backpack" loading="lazy"/>
+          <span class="badge">Trending</span>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Urban Backpack</h4>
+          <p class="product-desc">Water-resistant backpack with laptop compartment.</p>
+          <div class="product-bottom">
+            <span class="price">₹1,499</span>
+            <button class="add-cart-btn" onclick="addToCart('Urban Backpack', 1499)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="accessories">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6?w=400&q=80" alt="Leather Belt" loading="lazy"/>
+          <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="product-info">
+          <h4>Leather Belt</h4>
+          <p class="product-desc">Classic genuine leather belt with metal buckle.</p>
+          <div class="product-bottom">
+            <span class="price">₹449</span>
+            <button class="add-cart-btn" onclick="addToCart('Leather Belt', 449)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+      <button onclick="toggleCart()" class="close-cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <p>Your cart is empty</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <span id="cartTotal">₹0</span></div>
+      <button class="btn-primary checkout-btn" onclick="checkout()">Checkout <i class="fas fa-arrow-right"></i></button>
+    </div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="logo-text">👑 BOYS <span class="accent">COSMETIC</span> STORE</span>
+        <p>Premium fashion crafted for the bold young man.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#dresses">Dresses</a>
+        <a href="#shoes">Shoes</a>
+        <a href="#accessories">Accessories</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> boys@cosmeticstore.com</p>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Boys Cosmetic Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
